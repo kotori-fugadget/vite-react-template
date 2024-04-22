@@ -1,0 +1,4 @@
+
+type Lp = {
+    open: boolean
+}

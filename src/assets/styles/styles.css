@@ -1,0 +1,115 @@
+@keyframes confetti-slow {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg);
+  }
+}
+@keyframes confetti-medium {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg);
+  }
+}
+@keyframes confetti-fast {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg);
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body * {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+body a {
+  text-decoration: none;
+  color: unset;
+}
+
+body img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+body p, body h1, body h2, body h3, body h4 {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+body li {
+  list-style: none;
+  letter-spacing: 0.02em;
+}
+
+body div {
+  letter-spacing: 0.02em;
+}
+
+.Confettiful {
+  width: 100vw;
+  height: 100vh;
+  background: #f0f0f0;
+}
+.Confettiful .confetti-container {
+  perspective: 700px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.Confettiful .confetti {
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  border-radius: 0%;
+}
+.Confettiful .confetti--animation-slow {
+  animation: confetti-slow 2.25s linear 1 forwards;
+}
+.Confettiful .confetti--animation-medium {
+  animation: confetti-medium 1.75s linear 1 forwards;
+}
+.Confettiful .confetti--animation-fast {
+  animation: confetti-fast 1.25s linear 1 forwards;
+}

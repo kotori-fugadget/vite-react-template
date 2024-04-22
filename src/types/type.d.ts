@@ -1,4 +1,0 @@
-
-type Lp = {
-    open: boolean
-}
